@@ -10,10 +10,10 @@ import (
 	"testing"
 	"time"
 
+	"github.com/stretchr/testify/require"
 	"github.com/tetrafolium/mattermost-server/mlog"
 	"github.com/tetrafolium/mattermost-server/model"
 	"github.com/tetrafolium/mattermost-server/utils"
-	"github.com/stretchr/testify/require"
 )
 
 func TestPluginHealthCheck(t *testing.T) {

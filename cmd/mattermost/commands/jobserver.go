@@ -8,10 +8,10 @@ import (
 	"os/signal"
 	"syscall"
 
+	"github.com/spf13/cobra"
 	"github.com/tetrafolium/mattermost-server/audit"
 	"github.com/tetrafolium/mattermost-server/config"
 	"github.com/tetrafolium/mattermost-server/mlog"
-	"github.com/spf13/cobra"
 )
 
 var JobserverCmd = &cobra.Command{

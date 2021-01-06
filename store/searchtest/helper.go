@@ -7,9 +7,9 @@ import (
 	"fmt"
 	"testing"
 
+	"github.com/pkg/errors"
 	"github.com/tetrafolium/mattermost-server/model"
 	"github.com/tetrafolium/mattermost-server/store"
-	"github.com/pkg/errors"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

@@ -8,11 +8,11 @@ import (
 	"testing"
 	"time"
 
+	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/require"
 	"github.com/tetrafolium/mattermost-server/model"
 	"github.com/tetrafolium/mattermost-server/plugin/plugintest/mock"
 	"github.com/tetrafolium/mattermost-server/store/storetest/mocks"
-	"github.com/stretchr/testify/assert"
-	"github.com/stretchr/testify/require"
 
 	"github.com/aws/aws-sdk-go/service/marketplacemetering"
 	"github.com/aws/aws-sdk-go/service/marketplacemetering/marketplacemeteringiface"

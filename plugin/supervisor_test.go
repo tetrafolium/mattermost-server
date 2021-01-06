@@ -9,11 +9,11 @@ import (
 	"path/filepath"
 	"testing"
 
+	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/require"
 	"github.com/tetrafolium/mattermost-server/mlog"
 	"github.com/tetrafolium/mattermost-server/model"
 	"github.com/tetrafolium/mattermost-server/utils"
-	"github.com/stretchr/testify/assert"
-	"github.com/stretchr/testify/require"
 )
 
 func TestSupervisor(t *testing.T) {

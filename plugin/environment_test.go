@@ -9,8 +9,8 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/tetrafolium/mattermost-server/model"
 	"github.com/stretchr/testify/require"
+	"github.com/tetrafolium/mattermost-server/model"
 )
 
 func TestAvaliablePlugins(t *testing.T) {

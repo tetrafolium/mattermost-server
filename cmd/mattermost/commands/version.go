@@ -4,9 +4,9 @@
 package commands
 
 import (
+	"github.com/spf13/cobra"
 	"github.com/tetrafolium/mattermost-server/app"
 	"github.com/tetrafolium/mattermost-server/model"
-	"github.com/spf13/cobra"
 )
 
 var VersionCmd = &cobra.Command{

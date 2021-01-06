@@ -8,10 +8,10 @@ import (
 
 	"math"
 
-	"github.com/tetrafolium/mattermost-server/model"
-	"github.com/tetrafolium/mattermost-server/store"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
+	"github.com/tetrafolium/mattermost-server/model"
+	"github.com/tetrafolium/mattermost-server/store"
 )
 
 func TestChannelMemberHistoryStore(t *testing.T, ss store.Store) {

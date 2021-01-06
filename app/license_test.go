@@ -7,9 +7,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/tetrafolium/mattermost-server/model"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
+	"github.com/tetrafolium/mattermost-server/model"
 )
 
 func TestLoadLicense(t *testing.T) {

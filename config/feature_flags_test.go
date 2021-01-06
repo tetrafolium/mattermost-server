@@ -6,8 +6,8 @@ package config
 import (
 	"testing"
 
-	"github.com/tetrafolium/mattermost-server/model"
 	"github.com/stretchr/testify/require"
+	"github.com/tetrafolium/mattermost-server/model"
 )
 
 func TestGetStructFields(t *testing.T) {

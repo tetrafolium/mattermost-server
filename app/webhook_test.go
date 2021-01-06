@@ -13,10 +13,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/tetrafolium/mattermost-server/model"
-	"github.com/tetrafolium/mattermost-server/services/httpservice"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
+	"github.com/tetrafolium/mattermost-server/model"
+	"github.com/tetrafolium/mattermost-server/services/httpservice"
 )
 
 func TestCreateIncomingWebhookForChannel(t *testing.T) {

@@ -7,8 +7,8 @@ import (
 	"github.com/tetrafolium/mattermost-server/model"
 	"testing"
 
-	"github.com/tetrafolium/mattermost-server/store"
 	"github.com/stretchr/testify/require"
+	"github.com/tetrafolium/mattermost-server/store"
 )
 
 func TestProductNoticesStore(t *testing.T, ss store.Store) {

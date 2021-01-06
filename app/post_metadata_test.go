@@ -19,12 +19,12 @@ import (
 	"time"
 
 	"github.com/dyatlov/go-opengraph/opengraph"
+	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/require"
 	"github.com/tetrafolium/mattermost-server/model"
 	"github.com/tetrafolium/mattermost-server/services/httpservice"
 	"github.com/tetrafolium/mattermost-server/services/imageproxy"
 	"github.com/tetrafolium/mattermost-server/utils/testutils"
-	"github.com/stretchr/testify/assert"
-	"github.com/stretchr/testify/require"
 )
 
 func TestPreparePostListForClient(t *testing.T) {

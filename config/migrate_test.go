@@ -9,10 +9,10 @@ import (
 	"path"
 	"testing"
 
-	"github.com/tetrafolium/mattermost-server/config"
-	"github.com/tetrafolium/mattermost-server/model"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
+	"github.com/tetrafolium/mattermost-server/config"
+	"github.com/tetrafolium/mattermost-server/model"
 )
 
 func TestMigrate(t *testing.T) {

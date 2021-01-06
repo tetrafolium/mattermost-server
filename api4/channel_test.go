@@ -12,12 +12,12 @@ import (
 	"testing"
 	"time"
 
+	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/require"
 	"github.com/tetrafolium/mattermost-server/model"
 	"github.com/tetrafolium/mattermost-server/plugin/plugintest/mock"
 	"github.com/tetrafolium/mattermost-server/store/storetest/mocks"
 	"github.com/tetrafolium/mattermost-server/utils"
-	"github.com/stretchr/testify/assert"
-	"github.com/stretchr/testify/require"
 )
 
 func TestCreateChannel(t *testing.T) {

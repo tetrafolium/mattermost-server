@@ -9,10 +9,10 @@ import (
 
 	"github.com/go-sql-driver/mysql"
 	"github.com/lib/pq"
+	"github.com/stretchr/testify/require"
 	"github.com/tetrafolium/mattermost-server/mlog"
 	"github.com/tetrafolium/mattermost-server/model"
 	"github.com/tetrafolium/mattermost-server/testlib"
-	"github.com/stretchr/testify/require"
 )
 
 var mainHelper *testlib.MainHelper

@@ -6,9 +6,9 @@ package storetest
 import (
 	"testing"
 
+	"github.com/stretchr/testify/require"
 	"github.com/tetrafolium/mattermost-server/model"
 	"github.com/tetrafolium/mattermost-server/store"
-	"github.com/stretchr/testify/require"
 )
 
 func TestUserAccessTokenStore(t *testing.T, ss store.Store) {

@@ -8,10 +8,10 @@ import (
 
 	"time"
 
-	"github.com/tetrafolium/mattermost-server/model"
-	"github.com/tetrafolium/mattermost-server/store"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
+	"github.com/tetrafolium/mattermost-server/model"
+	"github.com/tetrafolium/mattermost-server/store"
 )
 
 func TestClusterDiscoveryStore(t *testing.T, ss store.Store) {

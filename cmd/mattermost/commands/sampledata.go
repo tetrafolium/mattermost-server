@@ -16,11 +16,11 @@ import (
 	"time"
 
 	"github.com/icrowley/fake"
+	"github.com/spf13/cobra"
 	"github.com/tetrafolium/mattermost-server/app"
 	"github.com/tetrafolium/mattermost-server/audit"
 	"github.com/tetrafolium/mattermost-server/model"
 	"github.com/tetrafolium/mattermost-server/utils"
-	"github.com/spf13/cobra"
 )
 
 const (

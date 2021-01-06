@@ -9,8 +9,8 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/tetrafolium/mattermost-server/model"
 	"github.com/stretchr/testify/require"
+	"github.com/tetrafolium/mattermost-server/model"
 )
 
 func TestParseAuthTokenFromRequest(t *testing.T) {

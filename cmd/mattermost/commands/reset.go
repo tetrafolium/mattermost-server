@@ -7,8 +7,8 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/tetrafolium/mattermost-server/audit"
 	"github.com/spf13/cobra"
+	"github.com/tetrafolium/mattermost-server/audit"
 )
 
 var ResetCmd = &cobra.Command{

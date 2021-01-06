@@ -11,12 +11,12 @@ import (
 	"unicode"
 	"unicode/utf8"
 
+	"github.com/pkg/errors"
 	"github.com/tetrafolium/mattermost-server/mlog"
 	"github.com/tetrafolium/mattermost-server/model"
 	"github.com/tetrafolium/mattermost-server/store"
 	"github.com/tetrafolium/mattermost-server/utils"
 	"github.com/tetrafolium/mattermost-server/utils/markdown"
-	"github.com/pkg/errors"
 )
 
 func (a *App) SendNotifications(post *model.Post, team *model.Team, channel *model.Channel, sender *model.User, parentPostList *model.PostList, setOnline bool) ([]string, error) {

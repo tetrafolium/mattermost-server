@@ -18,12 +18,12 @@ import (
 	"net/mail"
 	"net/smtp"
 
+	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/require"
 	"github.com/tetrafolium/mattermost-server/config"
 	"github.com/tetrafolium/mattermost-server/model"
 	"github.com/tetrafolium/mattermost-server/services/filesstore"
 	"github.com/tetrafolium/mattermost-server/utils"
-	"github.com/stretchr/testify/assert"
-	"github.com/stretchr/testify/require"
 )
 
 func TestMailConnectionFromConfig(t *testing.T) {

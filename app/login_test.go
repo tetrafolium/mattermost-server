@@ -8,8 +8,8 @@ import (
 	"os"
 	"testing"
 
-	"github.com/tetrafolium/mattermost-server/model"
 	"github.com/stretchr/testify/require"
+	"github.com/tetrafolium/mattermost-server/model"
 )
 
 func TestCheckForClientSideCert(t *testing.T) {

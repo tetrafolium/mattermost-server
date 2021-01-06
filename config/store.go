@@ -8,9 +8,9 @@ import (
 	"encoding/json"
 	"sync"
 
+	"github.com/pkg/errors"
 	"github.com/tetrafolium/mattermost-server/model"
 	"github.com/tetrafolium/mattermost-server/utils/jsonutils"
-	"github.com/pkg/errors"
 )
 
 // Listener is a callback function invoked when the configuration changes.

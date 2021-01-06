@@ -11,9 +11,9 @@ import (
 
 	"github.com/go-sql-driver/mysql"
 	"github.com/lib/pq"
+	"github.com/pkg/errors"
 	"github.com/tetrafolium/mattermost-server/model"
 	"github.com/tetrafolium/mattermost-server/store"
-	"github.com/pkg/errors"
 )
 
 const mySQLDeadlockCode = uint16(1213)

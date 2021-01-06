@@ -7,8 +7,8 @@ package mocks
 import (
 	context "context"
 
-	model "github.com/tetrafolium/mattermost-server/model"
 	mock "github.com/stretchr/testify/mock"
+	model "github.com/tetrafolium/mattermost-server/model"
 
 	store "github.com/tetrafolium/mattermost-server/store"
 

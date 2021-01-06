@@ -6,8 +6,8 @@ package sqlstore
 import (
 	"testing"
 
-	"github.com/tetrafolium/mattermost-server/store"
 	"github.com/stretchr/testify/require"
+	"github.com/tetrafolium/mattermost-server/store"
 )
 
 func TestStoreUpgrade(t *testing.T) {

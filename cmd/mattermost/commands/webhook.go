@@ -8,11 +8,11 @@ import (
 	"net/http"
 	"strings"
 
+	"github.com/pkg/errors"
+	"github.com/spf13/cobra"
 	"github.com/tetrafolium/mattermost-server/audit"
 	"github.com/tetrafolium/mattermost-server/model"
 	"github.com/tetrafolium/mattermost-server/store"
-	"github.com/pkg/errors"
-	"github.com/spf13/cobra"
 )
 
 var WebhookCmd = &cobra.Command{

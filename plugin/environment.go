@@ -12,11 +12,11 @@ import (
 	"sync"
 	"time"
 
+	"github.com/pkg/errors"
 	"github.com/tetrafolium/mattermost-server/einterfaces"
 	"github.com/tetrafolium/mattermost-server/mlog"
 	"github.com/tetrafolium/mattermost-server/model"
 	"github.com/tetrafolium/mattermost-server/utils"
-	"github.com/pkg/errors"
 )
 
 var ErrNotFound = errors.New("Item not found")

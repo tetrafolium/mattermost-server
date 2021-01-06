@@ -6,11 +6,11 @@ package commands
 import (
 	"fmt"
 
+	"github.com/pkg/errors"
+	"github.com/spf13/cobra"
 	"github.com/tetrafolium/mattermost-server/app"
 	"github.com/tetrafolium/mattermost-server/audit"
 	"github.com/tetrafolium/mattermost-server/model"
-	"github.com/pkg/errors"
-	"github.com/spf13/cobra"
 )
 
 var ChannelCmd = &cobra.Command{

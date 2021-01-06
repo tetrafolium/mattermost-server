@@ -13,11 +13,11 @@ import (
 	"strings"
 
 	goi18n "github.com/mattermost/go-i18n/i18n"
+	"github.com/pkg/errors"
 	"github.com/tetrafolium/mattermost-server/app"
 	"github.com/tetrafolium/mattermost-server/mlog"
 	"github.com/tetrafolium/mattermost-server/model"
 	"github.com/tetrafolium/mattermost-server/utils"
-	"github.com/pkg/errors"
 )
 
 var usage = `Mattermost testing commands to help configure the system

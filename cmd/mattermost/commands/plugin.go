@@ -8,10 +8,10 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/tetrafolium/mattermost-server/audit"
-	"github.com/tetrafolium/mattermost-server/model"
 	"github.com/pkg/errors"
 	"github.com/spf13/cobra"
+	"github.com/tetrafolium/mattermost-server/audit"
+	"github.com/tetrafolium/mattermost-server/model"
 )
 
 var PluginCmd = &cobra.Command{

@@ -9,11 +9,11 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/tetrafolium/mattermost-server/mlog"
-	"github.com/tetrafolium/mattermost-server/model"
 	"github.com/pkg/errors"
 	"github.com/splitio/go-client/v6/splitio/client"
 	"github.com/splitio/go-client/v6/splitio/conf"
+	"github.com/tetrafolium/mattermost-server/mlog"
+	"github.com/tetrafolium/mattermost-server/model"
 )
 
 type FeatureFlagSyncParams struct {

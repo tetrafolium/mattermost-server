@@ -10,9 +10,9 @@ import (
 	"syscall"
 	"testing"
 
+	"github.com/stretchr/testify/require"
 	"github.com/tetrafolium/mattermost-server/config"
 	"github.com/tetrafolium/mattermost-server/jobs"
-	"github.com/stretchr/testify/require"
 )
 
 const (

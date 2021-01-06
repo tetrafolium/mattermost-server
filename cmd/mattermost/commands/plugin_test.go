@@ -7,10 +7,10 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/tetrafolium/mattermost-server/config"
-	"github.com/tetrafolium/mattermost-server/utils/fileutils"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
+	"github.com/tetrafolium/mattermost-server/config"
+	"github.com/tetrafolium/mattermost-server/utils/fileutils"
 )
 
 func TestPlugin(t *testing.T) {

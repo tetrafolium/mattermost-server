@@ -7,8 +7,8 @@ import (
 	"io"
 	"time"
 
-	"github.com/tetrafolium/mattermost-server/mlog"
 	opentracing "github.com/opentracing/opentracing-go"
+	"github.com/tetrafolium/mattermost-server/mlog"
 	"github.com/uber/jaeger-lib/metrics"
 
 	"context"

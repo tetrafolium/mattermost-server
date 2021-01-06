@@ -10,6 +10,8 @@ import (
 	"runtime/debug"
 	"syscall"
 
+	"github.com/pkg/errors"
+	"github.com/spf13/cobra"
 	"github.com/tetrafolium/mattermost-server/api4"
 	"github.com/tetrafolium/mattermost-server/app"
 	"github.com/tetrafolium/mattermost-server/config"
@@ -18,8 +20,6 @@ import (
 	"github.com/tetrafolium/mattermost-server/utils"
 	"github.com/tetrafolium/mattermost-server/web"
 	"github.com/tetrafolium/mattermost-server/wsapi"
-	"github.com/pkg/errors"
-	"github.com/spf13/cobra"
 )
 
 var serverCmd = &cobra.Command{

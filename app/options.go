@@ -4,8 +4,8 @@
 package app
 
 import (
-	"github.com/tetrafolium/mattermost-server/mlog"
 	"github.com/pkg/errors"
+	"github.com/tetrafolium/mattermost-server/mlog"
 
 	"github.com/tetrafolium/mattermost-server/config"
 	"github.com/tetrafolium/mattermost-server/model"

@@ -14,6 +14,7 @@ import (
 
 	"testing"
 
+	"github.com/stretchr/testify/require"
 	"github.com/tetrafolium/mattermost-server/config"
 	"github.com/tetrafolium/mattermost-server/mlog"
 	"github.com/tetrafolium/mattermost-server/model"
@@ -23,7 +24,6 @@ import (
 	"github.com/tetrafolium/mattermost-server/store/storetest/mocks"
 	"github.com/tetrafolium/mattermost-server/testlib"
 	"github.com/tetrafolium/mattermost-server/utils"
-	"github.com/stretchr/testify/require"
 )
 
 type TestHelper struct {

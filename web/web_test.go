@@ -13,6 +13,8 @@ import (
 	"testing"
 	"time"
 
+	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/require"
 	"github.com/tetrafolium/mattermost-server/app"
 	"github.com/tetrafolium/mattermost-server/config"
 	"github.com/tetrafolium/mattermost-server/mlog"
@@ -23,8 +25,6 @@ import (
 	"github.com/tetrafolium/mattermost-server/store/storetest/mocks"
 	"github.com/tetrafolium/mattermost-server/testlib"
 	"github.com/tetrafolium/mattermost-server/utils"
-	"github.com/stretchr/testify/assert"
-	"github.com/stretchr/testify/require"
 )
 
 var ApiClient *model.Client4

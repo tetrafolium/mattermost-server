@@ -10,8 +10,8 @@ import (
 	"path"
 	"path/filepath"
 
-	"github.com/tetrafolium/mattermost-server/model"
 	"github.com/pkg/errors"
+	"github.com/tetrafolium/mattermost-server/model"
 
 	"github.com/tetrafolium/mattermost-server/utils"
 	"github.com/tetrafolium/mattermost-server/utils/fileutils"

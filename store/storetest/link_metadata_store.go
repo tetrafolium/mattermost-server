@@ -9,10 +9,10 @@ import (
 	"time"
 
 	"github.com/dyatlov/go-opengraph/opengraph"
-	"github.com/tetrafolium/mattermost-server/model"
-	"github.com/tetrafolium/mattermost-server/store"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
+	"github.com/tetrafolium/mattermost-server/model"
+	"github.com/tetrafolium/mattermost-server/store"
 )
 
 // These tests are ran on the same store instance, so this provides easier unique, valid timestamps

@@ -11,8 +11,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/tetrafolium/mattermost-server/mlog"
 	"github.com/pkg/errors"
+	"github.com/tetrafolium/mattermost-server/mlog"
 )
 
 // extractTarGz takes in an io.Reader containing the bytes for a .tar.gz file and

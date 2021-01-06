@@ -6,8 +6,8 @@ package api4
 import (
 	"testing"
 
-	"github.com/tetrafolium/mattermost-server/model"
 	"github.com/stretchr/testify/assert"
+	"github.com/tetrafolium/mattermost-server/model"
 )
 
 func TestGetUserStatus(t *testing.T) {

@@ -9,8 +9,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/tetrafolium/mattermost-server/model"
 	"github.com/stretchr/testify/require"
+	"github.com/tetrafolium/mattermost-server/model"
 )
 
 func TestCreateJob(t *testing.T) {

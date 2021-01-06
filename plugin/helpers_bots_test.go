@@ -8,12 +8,12 @@ import (
 	"path/filepath"
 	"testing"
 
+	"github.com/stretchr/testify/assert"
 	"github.com/tetrafolium/mattermost-server/model"
 	"github.com/tetrafolium/mattermost-server/plugin"
 	"github.com/tetrafolium/mattermost-server/plugin/plugintest"
 	"github.com/tetrafolium/mattermost-server/plugin/plugintest/mock"
 	"github.com/tetrafolium/mattermost-server/utils/fileutils"
-	"github.com/stretchr/testify/assert"
 )
 
 func TestEnsureBot(t *testing.T) {

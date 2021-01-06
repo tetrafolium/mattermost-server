@@ -6,12 +6,12 @@ package app
 import (
 	"testing"
 
+	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/mock"
 	"github.com/tetrafolium/mattermost-server/einterfaces"
 	"github.com/tetrafolium/mattermost-server/einterfaces/mocks"
 	"github.com/tetrafolium/mattermost-server/model"
 	storemocks "github.com/tetrafolium/mattermost-server/store/storetest/mocks"
-	"github.com/stretchr/testify/assert"
-	"github.com/stretchr/testify/mock"
 )
 
 func TestSAMLSettings(t *testing.T) {

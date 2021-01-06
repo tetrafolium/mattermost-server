@@ -7,10 +7,10 @@ import (
 	"context"
 	"time"
 
+	"github.com/stretchr/testify/mock"
 	"github.com/tetrafolium/mattermost-server/model"
 	"github.com/tetrafolium/mattermost-server/store"
 	"github.com/tetrafolium/mattermost-server/store/storetest/mocks"
-	"github.com/stretchr/testify/mock"
 )
 
 // Store can be used to provide mock stores for testing.

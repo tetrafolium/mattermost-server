@@ -7,8 +7,8 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/tetrafolium/mattermost-server/utils/testutils"
 	"github.com/stretchr/testify/require"
+	"github.com/tetrafolium/mattermost-server/utils/testutils"
 )
 
 func TestGetBrandImage(t *testing.T) {

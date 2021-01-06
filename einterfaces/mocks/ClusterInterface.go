@@ -5,8 +5,8 @@
 package mocks
 
 import (
-	einterfaces "github.com/tetrafolium/mattermost-server/einterfaces"
 	mock "github.com/stretchr/testify/mock"
+	einterfaces "github.com/tetrafolium/mattermost-server/einterfaces"
 
 	model "github.com/tetrafolium/mattermost-server/model"
 )

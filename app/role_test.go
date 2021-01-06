@@ -11,9 +11,9 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/stretchr/testify/require"
 	"github.com/tetrafolium/mattermost-server/model"
 	"github.com/tetrafolium/mattermost-server/utils"
-	"github.com/stretchr/testify/require"
 )
 
 type permissionInheritanceTestData struct {

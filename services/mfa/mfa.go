@@ -10,10 +10,10 @@ import (
 	"strings"
 
 	"github.com/dgryski/dgoogauth"
+	"github.com/mattermost/rsc/qr"
 	"github.com/tetrafolium/mattermost-server/model"
 	"github.com/tetrafolium/mattermost-server/services/configservice"
 	"github.com/tetrafolium/mattermost-server/store"
-	"github.com/mattermost/rsc/qr"
 )
 
 const (

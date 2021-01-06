@@ -6,9 +6,9 @@ package app
 import (
 	"testing"
 
+	"github.com/stretchr/testify/require"
 	"github.com/tetrafolium/mattermost-server/model"
 	"github.com/tetrafolium/mattermost-server/plugin"
-	"github.com/stretchr/testify/require"
 )
 
 func TestHealthCheckJob(t *testing.T) {

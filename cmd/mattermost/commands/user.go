@@ -10,10 +10,10 @@ import (
 	"io/ioutil"
 	"strings"
 
+	"github.com/spf13/cobra"
 	"github.com/tetrafolium/mattermost-server/app"
 	"github.com/tetrafolium/mattermost-server/audit"
 	"github.com/tetrafolium/mattermost-server/model"
-	"github.com/spf13/cobra"
 )
 
 var UserCmd = &cobra.Command{

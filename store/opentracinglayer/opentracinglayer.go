@@ -9,11 +9,11 @@ package opentracinglayer
 import (
 	"context"
 
+	"github.com/opentracing/opentracing-go/ext"
+	spanlog "github.com/opentracing/opentracing-go/log"
 	"github.com/tetrafolium/mattermost-server/model"
 	"github.com/tetrafolium/mattermost-server/services/tracing"
 	"github.com/tetrafolium/mattermost-server/store"
-	"github.com/opentracing/opentracing-go/ext"
-	spanlog "github.com/opentracing/opentracing-go/log"
 )
 
 type OpenTracingLayer struct {

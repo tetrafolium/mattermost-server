@@ -9,8 +9,8 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/tetrafolium/mattermost-server/config"
 	"github.com/stretchr/testify/require"
+	"github.com/tetrafolium/mattermost-server/config"
 )
 
 func TestNewStore(t *testing.T) {

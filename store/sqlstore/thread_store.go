@@ -7,10 +7,10 @@ import (
 	"database/sql"
 	"time"
 
+	"github.com/pkg/errors"
 	"github.com/tetrafolium/mattermost-server/model"
 	"github.com/tetrafolium/mattermost-server/store"
 	"github.com/tetrafolium/mattermost-server/utils"
-	"github.com/pkg/errors"
 
 	sq "github.com/Masterminds/squirrel"
 )

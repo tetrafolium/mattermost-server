@@ -29,7 +29,7 @@ $ gpg --import ./development-private-key.asc
 
 This has to be done only once.
 
-Then update the sigantures:
+Then update the signatures:
 ```
 $ gpg -u F3FACE45E0DE642C8BD6A8E64C7C6562C192CC1F --verbose --personal-digest-preferences SHA256 --detach-sign testplugin.tar.gz
 $ gpg -u F3FACE45E0DE642C8BD6A8E64C7C6562C192CC1F --verbose --personal-digest-preferences SHA256 --detach-sign --armor testplugin.tar.gz

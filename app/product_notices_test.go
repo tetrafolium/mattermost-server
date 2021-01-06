@@ -39,7 +39,7 @@ func TestNoticeValidation(t *testing.T) {
 	mockUserStore.On("Count", model.UserCountOptions{IncludeBotAccounts: false, IncludeDeleted: true, ExcludeRegularUsers: false, TeamId: "", ChannelId: "", ViewRestrictions: (*model.ViewUsersRestrictions)(nil), Roles: []string(nil), ChannelRoles: []string(nil), TeamRoles: []string(nil)}).Return(int64(1), nil)
 	mockPreferenceStore.On("Get", "test", "Stuff", "Data").Return(&model.Preference{Value: "test2"}, nil)
 	mockPreferenceStore.On("Get", "test", "Stuff", "Data2").Return(&model.Preference{Value: "test"}, nil)
-	mockPreferenceStore.On("Get", "test", "Stuff", "Data3").Return(nil, errors.New("Error!"))
+	mockPreferenceStore.On("Get", "test", "Stuff", "Data3").Return(nil, errors.New("Error"))
 	mockPostStore.On("GetMaxPostSize").Return(65535, nil)
 
 	th.App.UpdateConfig(func(cfg *model.Config) {

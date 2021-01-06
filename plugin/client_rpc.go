@@ -24,7 +24,7 @@ import (
 	"github.com/tetrafolium/mattermost-server/model"
 )
 
-var hookNameToId map[string]int = make(map[string]int)
+var hookNameToId = make(map[string]int)
 
 type hooksRPCClient struct {
 	client      *rpc.Client
@@ -435,7 +435,7 @@ func (s *apiRPCServer) PluginHTTP(args *Z_PluginHTTPArgs, returns *Z_PluginHTTPR
 		returns.Response = response
 		returns.ResponseBody = responseBody
 	} else {
-		return encodableError(fmt.Errorf("API PluginHTTP called but not implemented."))
+		return encodableError(fmt.Errorf("API PluginHTTP called but not implemented"))
 	}
 	return nil
 }
@@ -523,7 +523,7 @@ func (s *hooksRPCServer) FileWillBeUploaded(args *Z_FileWillBeUploadedArgs, retu
 	}); ok {
 		returns.A, returns.B = hook.FileWillBeUploaded(args.A, args.B, fileReader, returnFileWriter)
 	} else {
-		return fmt.Errorf("Hook FileWillBeUploaded called but not implemented.")
+		return fmt.Errorf("Hook FileWillBeUploaded called but not implemented")
 	}
 	return nil
 }
@@ -563,7 +563,7 @@ func (s *hooksRPCServer) MessageWillBePosted(args *Z_MessageWillBePostedArgs, re
 		returns.A, returns.B = hook.MessageWillBePosted(args.A, args.B)
 
 	} else {
-		return encodableError(fmt.Errorf("Hook MessageWillBePosted called but not implemented."))
+		return encodableError(fmt.Errorf("Hook MessageWillBePosted called but not implemented"))
 	}
 	return nil
 }
@@ -604,7 +604,7 @@ func (s *hooksRPCServer) MessageWillBeUpdated(args *Z_MessageWillBeUpdatedArgs, 
 		returns.A, returns.B = hook.MessageWillBeUpdated(args.A, args.B, args.C)
 
 	} else {
-		return encodableError(fmt.Errorf("Hook MessageWillBeUpdated called but not implemented."))
+		return encodableError(fmt.Errorf("Hook MessageWillBeUpdated called but not implemented"))
 	}
 	return nil
 }
@@ -633,7 +633,7 @@ func (s *apiRPCServer) LogDebug(args *Z_LogDebugArgs, returns *Z_LogDebugReturns
 	}); ok {
 		hook.LogDebug(args.A, args.B...)
 	} else {
-		return encodableError(fmt.Errorf("API LogDebug called but not implemented."))
+		return encodableError(fmt.Errorf("API LogDebug called but not implemented"))
 	}
 	return nil
 }
@@ -662,7 +662,7 @@ func (s *apiRPCServer) LogInfo(args *Z_LogInfoArgs, returns *Z_LogInfoReturns) e
 	}); ok {
 		hook.LogInfo(args.A, args.B...)
 	} else {
-		return encodableError(fmt.Errorf("API LogInfo called but not implemented."))
+		return encodableError(fmt.Errorf("API LogInfo called but not implemented"))
 	}
 	return nil
 }
@@ -691,7 +691,7 @@ func (s *apiRPCServer) LogWarn(args *Z_LogWarnArgs, returns *Z_LogWarnReturns) e
 	}); ok {
 		hook.LogWarn(args.A, args.B...)
 	} else {
-		return encodableError(fmt.Errorf("API LogWarn called but not implemented."))
+		return encodableError(fmt.Errorf("API LogWarn called but not implemented"))
 	}
 	return nil
 }
@@ -719,7 +719,7 @@ func (s *apiRPCServer) LogError(args *Z_LogErrorArgs, returns *Z_LogErrorReturns
 	}); ok {
 		hook.LogError(args.A, args.B...)
 	} else {
-		return encodableError(fmt.Errorf("API LogError called but not implemented."))
+		return encodableError(fmt.Errorf("API LogError called but not implemented"))
 	}
 	return nil
 }
@@ -761,7 +761,7 @@ func (s *apiRPCServer) InstallPlugin(args *Z_InstallPluginArgs, returns *Z_Insta
 		InstallPlugin(file io.Reader, replace bool) (*model.Manifest, *model.AppError)
 	})
 	if !ok {
-		return encodableError(fmt.Errorf("API InstallPlugin called but not implemented."))
+		return encodableError(fmt.Errorf("API InstallPlugin called but not implemented"))
 	}
 
 	receivePluginConnection, err := s.muxBroker.Dial(args.PluginStreamID)

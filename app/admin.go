@@ -80,7 +80,7 @@ func (s *Server) GetLogsSkipSend(page, perPage int) ([]string, *model.AppError) 
 		var lineCount int
 		const searchPos = -1
 		b := make([]byte, 1)
-		var endOffset int64 = 0
+		var endOffset int64
 
 		// if the file exists and it's last byte is '\n' - skip it
 		var stat os.FileInfo

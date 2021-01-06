@@ -214,10 +214,10 @@ func sampleDataCmdF(command *cobra.Command, args []string) error {
 		var profileImagesStat os.FileInfo
 		profileImagesStat, err = os.Stat(profileImagesPath)
 		if os.IsNotExist(err) {
-			return errors.New("Profile images folder doesn't exists.")
+			return errors.New("Profile images folder doesn't exists")
 		}
 		if !profileImagesStat.IsDir() {
-			return errors.New("profile-images parameters must be a folder path.")
+			return errors.New("profile-images parameters must be a folder path")
 		}
 		var profileImagesFiles []os.FileInfo
 		profileImagesFiles, err = ioutil.ReadDir(profileImagesPath)
@@ -231,17 +231,17 @@ func sampleDataCmdF(command *cobra.Command, args []string) error {
 	}
 
 	if workers < 1 {
-		return errors.New("You must have at least one worker.")
+		return errors.New("You must have at least one worker")
 	}
 	if teamMemberships > teams {
-		return errors.New("You can't have more team memberships than teams.")
+		return errors.New("You can't have more team memberships than teams")
 	}
 	if channelMemberships > channelsPerTeam {
-		return errors.New("You can't have more channel memberships than channels per team.")
+		return errors.New("You can't have more channel memberships than channels per team")
 	}
 
 	if users < 6 && groupChannels > 0 {
-		return errors.New("You can't have group channels generation with less than 6 users. Use --group-channels 0 or increase the number of users.")
+		return errors.New("You can't have group channels generation with less than 6 users. Use --group-channels 0 or increase the number of users")
 	}
 
 	var bulkFile *os.File
@@ -250,7 +250,7 @@ func sampleDataCmdF(command *cobra.Command, args []string) error {
 		bulkFile, err = ioutil.TempFile("", ".mattermost-sample-data-")
 		defer os.Remove(bulkFile.Name())
 		if err != nil {
-			return errors.New("Unable to open temporary file.")
+			return errors.New("Unable to open temporary file")
 		}
 	case "-":
 		bulkFile = os.Stdout
@@ -368,7 +368,7 @@ func sampleDataCmdF(command *cobra.Command, args []string) error {
 	if bulk == "" {
 		_, err := bulkFile.Seek(0, 0)
 		if err != nil {
-			return errors.New("Unable to read correctly the temporary file.")
+			return errors.New("Unable to read correctly the temporary file")
 		}
 
 		var importErr *model.AppError
@@ -430,7 +430,7 @@ func createUser(idx int, teamMemberships int, channelMemberships int, teamsAndCh
 	}
 
 	// The 75% of the users have custom profile image
-	var profileImage *string = nil
+	var profileImage *string
 	if rand.Intn(4) != 0 {
 		profileImageSelector := rand.Int()
 		if len(profileImages) > 0 {

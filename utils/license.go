@@ -21,7 +21,7 @@ import (
 	"github.com/tetrafolium/mattermost-server/utils/fileutils"
 )
 
-var publicKey []byte = []byte(`-----BEGIN PUBLIC KEY-----
+var publicKey = []byte(`-----BEGIN PUBLIC KEY-----
 MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyZmShlU8Z8HdG0IWSZ8r
 tSyzyxrXkJjsFUf0Ke7bm/TLtIggRdqOcUF3XEWqQk5RGD5vuq7Rlg1zZqMEBk8N
 EZeRhkxyaZW8pLjxwuBUOnXfJew31+gsTNdKZzRjrvPumKr3EtkleuoxNdoatu4E

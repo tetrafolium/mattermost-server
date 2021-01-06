@@ -25,6 +25,6 @@ func (p *PluginUsingLogAPI) MessageWillBePosted(c *plugin.Context, post *model.P
 	p.API.LogDebug("LogDebug", "one", 1, "two", "two", "foo", Foo{bar: 3.1416})
 	p.API.LogInfo("LogInfo", "one", 1, "two", "two", "foo", Foo{bar: 3.1416})
 	p.API.LogWarn("LogWarn", "one", 1, "two", "two", "foo", Foo{bar: 3.1416})
-	p.API.LogError("LogError", "error", errors.WithStack(errors.New("boom!")))
+	p.API.LogError("LogError", "error", errors.WithStack(errors.New("boom")))
 	return nil, "OK"
 }

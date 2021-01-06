@@ -21,8 +21,8 @@ func (o *ChannelList) ToJson() string {
 func (o *ChannelList) Etag() string {
 
 	id := "0"
-	var t int64 = 0
-	var delta int64 = 0
+	var t int64
+	var delta int64
 
 	for _, v := range *o {
 		if v.LastPostAt > t {
@@ -65,8 +65,8 @@ func (o *ChannelListWithTeamData) ToJson() string {
 func (o *ChannelListWithTeamData) Etag() string {
 
 	id := "0"
-	var t int64 = 0
-	var delta int64 = 0
+	var t int64
+	var delta int64
 
 	for _, v := range *o {
 		if v.LastPostAt > t {

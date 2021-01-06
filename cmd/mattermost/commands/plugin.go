@@ -110,7 +110,7 @@ func pluginAddCmdF(command *cobra.Command, args []string) error {
 	defer a.Srv().Shutdown()
 
 	if len(args) < 1 {
-		return errors.New("Expected at least one argument. See help text for details.")
+		return errors.New("Expected at least one argument. See help text for details")
 	}
 
 	for i, plugin := range args {
@@ -140,7 +140,7 @@ func pluginDeleteCmdF(command *cobra.Command, args []string) error {
 	defer a.Srv().Shutdown()
 
 	if len(args) < 1 {
-		return errors.New("Expected at least one argument. See help text for details.")
+		return errors.New("Expected at least one argument. See help text for details")
 	}
 
 	for _, plugin := range args {
@@ -164,7 +164,7 @@ func pluginEnableCmdF(command *cobra.Command, args []string) error {
 	defer a.Srv().Shutdown()
 
 	if len(args) < 1 {
-		return errors.New("Expected at least one argument. See help text for details.")
+		return errors.New("Expected at least one argument. See help text for details")
 	}
 
 	for _, plugin := range args {
@@ -188,7 +188,7 @@ func pluginDisableCmdF(command *cobra.Command, args []string) error {
 	defer a.Srv().Shutdown()
 
 	if len(args) < 1 {
-		return errors.New("Expected at least one argument. See help text for details.")
+		return errors.New("Expected at least one argument. See help text for details")
 	}
 
 	for _, plugin := range args {
@@ -271,7 +271,7 @@ func pluginAddPublicKeyCmdF(command *cobra.Command, args []string) error {
 	defer a.Srv().Shutdown()
 
 	if len(args) < 1 {
-		return errors.New("Expected at least one argument. See help text for details.")
+		return errors.New("Expected at least one argument. See help text for details")
 	}
 
 	for _, pkFile := range args {
@@ -302,7 +302,7 @@ func pluginDeletePublicKeyCmdF(command *cobra.Command, args []string) error {
 	defer a.Srv().Shutdown()
 
 	if len(args) < 1 {
-		return errors.New("Expected at least one argument. See help text for details.")
+		return errors.New("Expected at least one argument. See help text for details")
 	}
 
 	for _, pkFile := range args {

@@ -116,30 +116,30 @@ var MigrateAuthCmd = &cobra.Command{
 	Example: "  user migrate_auth email saml users.json",
 	Args: func(command *cobra.Command, args []string) error {
 		if len(args) < 2 {
-			return errors.New("Auth migration requires at least 2 arguments.")
+			return errors.New("Auth migration requires at least 2 arguments")
 		}
 
 		toAuth := args[1]
 
 		if toAuth != "ldap" && toAuth != "saml" {
-			return errors.New("Invalid to_auth parameter, must be saml or ldap.")
+			return errors.New("Invalid to_auth parameter, must be saml or ldap")
 		}
 
 		if toAuth == "ldap" && len(args) != 3 {
-			return errors.New("Ldap migration requires 3 arguments.")
+			return errors.New("Ldap migration requires 3 arguments")
 		}
 
 		autoFlag, _ := command.Flags().GetBool("auto")
 
 		if toAuth == "saml" && autoFlag {
 			if len(args) != 2 {
-				return errors.New("Saml migration requires two arguments when using the --auto flag. See help text for details.")
+				return errors.New("Saml migration requires two arguments when using the --auto flag. See help text for details")
 			}
 		}
 
 		if toAuth == "saml" && !autoFlag {
 			if len(args) != 3 {
-				return errors.New("Saml migration requires three arguments when not using the --auto flag. See help text for details.")
+				return errors.New("Saml migration requires three arguments when not using the --auto flag. See help text for details")
 			}
 		}
 		return nil
@@ -278,7 +278,7 @@ func userActivateCmdF(command *cobra.Command, args []string) error {
 	defer a.Srv().Shutdown()
 
 	if len(args) < 1 {
-		return errors.New("Expected at least one argument. See help text for details.")
+		return errors.New("Expected at least one argument. See help text for details")
 	}
 
 	changeUsersActiveStatus(a, args, true)
@@ -325,7 +325,7 @@ func userDeactivateCmdF(command *cobra.Command, args []string) error {
 	defer a.Srv().Shutdown()
 
 	if len(args) < 1 {
-		return errors.New("Expected at least one argument. See help text for details.")
+		return errors.New("Expected at least one argument. See help text for details")
 	}
 
 	changeUsersActiveStatus(a, args, false)
@@ -432,7 +432,7 @@ func getUpdatedPassword(command *cobra.Command, a *app.App, user *model.User) (s
 	}
 
 	if password == "" {
-		return "", errors.New("Password is required.")
+		return "", errors.New("Password is required")
 	}
 
 	return password, nil
@@ -442,7 +442,7 @@ func getUpdatedUserModel(command *cobra.Command, a *app.App, user *model.User) (
 	username, _ := command.Flags().GetString("username")
 	if username == "" {
 		if user.Username == "" {
-			return nil, errors.New("Invalid username. Username is empty.")
+			return nil, errors.New("Invalid username. Username is empty")
 		}
 	} else {
 		user.Username = username
@@ -451,7 +451,7 @@ func getUpdatedUserModel(command *cobra.Command, a *app.App, user *model.User) (
 	email, _ := command.Flags().GetString("email")
 	if email == "" {
 		if user.Email == "" {
-			return nil, errors.New("Invalid email. Email is empty.")
+			return nil, errors.New("Invalid email. Email is empty")
 		}
 	} else {
 		user.Email = email
@@ -478,7 +478,7 @@ func getUpdatedUserModel(command *cobra.Command, a *app.App, user *model.User) (
 	}
 
 	if !user.IsLDAPUser() && !user.IsSAMLUser() && !app.CheckUserDomain(user, *a.Config().TeamSettings.RestrictCreationToDomains) {
-		return nil, errors.New("The email does not belong to an accepted domain.")
+		return nil, errors.New("The email does not belong to an accepted domain")
 	}
 
 	return user, nil
@@ -486,12 +486,12 @@ func getUpdatedUserModel(command *cobra.Command, a *app.App, user *model.User) (
 
 func botToUser(command *cobra.Command, args []string, a *app.App) error {
 	if len(args) != 1 {
-		return errors.New("Expect 1 argument. See help text for more details.")
+		return errors.New("Expect 1 argument. See help text for more details")
 	}
 
 	user := getUserFromUserArg(a, args[0])
 	if user == nil {
-		return errors.New("Unable to find bot.")
+		return errors.New("Unable to find bot")
 	}
 
 	_, appErr := a.GetBot(user.Id, false)
@@ -560,20 +560,20 @@ func userConvertCmdF(command *cobra.Command, args []string) error {
 
 	toBot, err := command.Flags().GetBool("bot")
 	if err != nil {
-		return errors.New("Invalid command. See help text for details.")
+		return errors.New("Invalid command. See help text for details")
 	}
 
 	toUser, err := command.Flags().GetBool("user")
 	if err != nil {
-		return errors.New("Invalid command. See help text for details.")
+		return errors.New("Invalid command. See help text for details")
 	}
 
 	if !(toUser || toBot) {
-		return errors.New("Expect either \"user\" flag or \"bot\" flag. See help text for details.")
+		return errors.New("Expect either \"user\" flag or \"bot\" flag. See help text for details")
 	}
 
 	if toUser && toBot {
-		return errors.New("Expect either \"user\" flag or \"bot\" flag but not both. See help text for details.")
+		return errors.New("Expect either \"user\" flag or \"bot\" flag but not both. See help text for details")
 	}
 
 	if toUser {
@@ -592,7 +592,7 @@ func userInviteCmdF(command *cobra.Command, args []string) error {
 	defer a.Srv().Shutdown()
 
 	if len(args) < 2 {
-		return errors.New("Expected at least two arguments. See help text for details.")
+		return errors.New("Expected at least two arguments. See help text for details")
 	}
 
 	email := args[0]
@@ -620,7 +620,7 @@ func inviteUser(a *app.App, email string, team *model.Team, teamArg string) erro
 	}
 
 	if !*a.Config().ServiceSettings.EnableEmailInvitations {
-		return fmt.Errorf("Email invites are disabled.")
+		return fmt.Errorf("Email invites are disabled")
 	}
 
 	err := a.Srv().EmailService.SendInviteEmails(team, "Administrator", "Mattermost CLI "+model.NewId(), invites, *a.Config().ServiceSettings.SiteURL)
@@ -645,7 +645,7 @@ func resetUserPasswordCmdF(command *cobra.Command, args []string) error {
 	defer a.Srv().Shutdown()
 
 	if len(args) != 2 {
-		return errors.New("Expected two arguments. See help text for details.")
+		return errors.New("Expected two arguments. See help text for details")
 	}
 
 	user := getUserFromUserArg(a, args[0])
@@ -673,7 +673,7 @@ func updateUserEmailCmdF(command *cobra.Command, args []string) error {
 	defer a.Srv().Shutdown()
 
 	if len(args) != 2 {
-		return errors.New("Expected two arguments. See help text for details.")
+		return errors.New("Expected two arguments. See help text for details")
 	}
 
 	newEmail := args[1]
@@ -683,7 +683,7 @@ func updateUserEmailCmdF(command *cobra.Command, args []string) error {
 	}
 
 	if len(args) != 2 {
-		return errors.New("Expected two arguments. See help text for details.")
+		return errors.New("Expected two arguments. See help text for details")
 	}
 
 	user := getUserFromUserArg(a, args[0])
@@ -713,7 +713,7 @@ func resetUserMfaCmdF(command *cobra.Command, args []string) error {
 	defer a.Srv().Shutdown()
 
 	if len(args) < 1 {
-		return errors.New("Expected at least one argument. See help text for details.")
+		return errors.New("Expected at least one argument. See help text for details")
 	}
 
 	users := getUsersFromUserArgs(a, args)
@@ -742,7 +742,7 @@ func deleteUserCmdF(command *cobra.Command, args []string) error {
 	defer a.Srv().Shutdown()
 
 	if len(args) < 1 {
-		return errors.New("Expected at least one argument. See help text for details.")
+		return errors.New("Expected at least one argument. See help text for details")
 	}
 
 	confirmFlag, _ := command.Flags().GetBool("confirm")
@@ -752,12 +752,12 @@ func deleteUserCmdF(command *cobra.Command, args []string) error {
 		fmt.Scanln(&confirm)
 
 		if confirm != "YES" {
-			return errors.New("ABORTED: You did not answer YES exactly, in all capitals.")
+			return errors.New("ABORTED: You did not answer YES exactly, in all capitals")
 		}
 		CommandPrettyPrintln("Are you sure you want to permanently delete the specified users? (YES/NO): ")
 		fmt.Scanln(&confirm)
 		if confirm != "YES" {
-			return errors.New("ABORTED: You did not answer YES exactly, in all capitals.")
+			return errors.New("ABORTED: You did not answer YES exactly, in all capitals")
 		}
 	}
 
@@ -795,7 +795,7 @@ func deleteAllUsersCommandF(command *cobra.Command, args []string) error {
 	defer a.Srv().Shutdown()
 
 	if len(args) > 0 {
-		return errors.New("Expected zero arguments.")
+		return errors.New("Expected zero arguments")
 	}
 
 	confirmFlag, _ := command.Flags().GetBool("confirm")
@@ -805,12 +805,12 @@ func deleteAllUsersCommandF(command *cobra.Command, args []string) error {
 		fmt.Scanln(&confirm)
 
 		if confirm != "YES" {
-			return errors.New("ABORTED: You did not answer YES exactly, in all capitals.")
+			return errors.New("ABORTED: You did not answer YES exactly, in all capitals")
 		}
 		CommandPrettyPrintln("Are you sure you want to permanently delete all user accounts? (YES/NO): ")
 		fmt.Scanln(&confirm)
 		if confirm != "YES" {
-			return errors.New("ABORTED: You did not answer YES exactly, in all capitals.")
+			return errors.New("ABORTED: You did not answer YES exactly, in all capitals")
 		}
 	}
 
@@ -893,10 +893,10 @@ func migrateAuthToSamlCmdF(command *cobra.Command, args []string) error {
 
 		file, e := ioutil.ReadFile(matchesFile)
 		if e != nil {
-			return errors.New("Invalid users file.")
+			return errors.New("Invalid users file")
 		}
 		if json.Unmarshal(file, &matches) != nil {
-			return errors.New("Invalid users file.")
+			return errors.New("Invalid users file")
 		}
 	}
 
@@ -912,7 +912,7 @@ func migrateAuthToSamlCmdF(command *cobra.Command, args []string) error {
 		fmt.Scanln(&confirm)
 
 		if confirm != "YES" {
-			return errors.New("ABORTED: You did not answer YES exactly, in all capitals.")
+			return errors.New("ABORTED: You did not answer YES exactly, in all capitals")
 		}
 	}
 
@@ -945,7 +945,7 @@ func verifyUserCmdF(command *cobra.Command, args []string) error {
 	defer a.Srv().Shutdown()
 
 	if len(args) < 1 {
-		return errors.New("Expected at least one argument. See help text for details.")
+		return errors.New("Expected at least one argument. See help text for details")
 	}
 
 	users := getUsersFromUserArgs(a, args)
@@ -971,7 +971,7 @@ func searchUserCmdF(command *cobra.Command, args []string) error {
 	defer a.Srv().Shutdown()
 
 	if len(args) < 1 {
-		return errors.New("Expected at least one argument. See help text for details.")
+		return errors.New("Expected at least one argument. See help text for details")
 	}
 
 	users := getUsersFromUserArgs(a, args)

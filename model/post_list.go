@@ -128,7 +128,7 @@ func (o *PostList) SortByCreateAt() {
 func (o *PostList) Etag() string {
 
 	id := "0"
-	var t int64 = 0
+	var t int64
 
 	for _, v := range o.Posts {
 		if v.UpdateAt > t {

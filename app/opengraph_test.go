@@ -4,9 +4,10 @@
 package app
 
 import (
-	"github.com/stretchr/testify/require"
 	"strings"
 	"testing"
+
+	"github.com/stretchr/testify/require"
 
 	"github.com/dyatlov/go-opengraph/opengraph"
 	"github.com/stretchr/testify/assert"

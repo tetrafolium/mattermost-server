@@ -4,8 +4,9 @@
 package sqlstore
 
 import (
-	"github.com/stretchr/testify/require"
 	"testing"
+
+	"github.com/stretchr/testify/require"
 
 	"github.com/tetrafolium/mattermost-server/store/searchtest"
 	"github.com/tetrafolium/mattermost-server/store/storetest"

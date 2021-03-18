@@ -14,7 +14,7 @@ type ChannelData struct {
 }
 
 func (o *ChannelData) Etag() string {
-	var mt int64 = 0
+	var mt int64
 	if o.Member != nil {
 		mt = o.Member.LastUpdateAt
 	}

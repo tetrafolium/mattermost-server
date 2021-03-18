@@ -19,7 +19,7 @@ import (
 
 var T i18n.TranslateFunc
 var TDefault i18n.TranslateFunc
-var locales map[string]string = make(map[string]string)
+var locales = make(map[string]string)
 var settings model.LocalizationSettings
 
 // this functions loads translations from filesystem if they are not

@@ -358,7 +358,7 @@ func deleteChannelsCmdF(command *cobra.Command, args []string) error {
 		CommandPrettyPrintln("Are you sure you want to delete the channels specified?  All data will be permanently deleted? (YES/NO): ")
 		fmt.Scanln(&confirm)
 		if confirm != "YES" {
-			return errors.New("ABORTED: You did not answer YES exactly, in all capitals.")
+			return errors.New("ABORTED: You did not answer YES exactly, in all capitals")
 		}
 	}
 
@@ -399,7 +399,7 @@ func moveChannelsCmdF(command *cobra.Command, args []string) error {
 
 	username, erru := command.Flags().GetString("username")
 	if erru != nil || username == "" {
-		return errors.New("Username is required.")
+		return errors.New("Username is required")
 	}
 	user := getUserFromUserArg(a, username)
 
@@ -535,7 +535,7 @@ func modifyChannelCmdF(command *cobra.Command, args []string) error {
 
 	username, erru := command.Flags().GetString("username")
 	if erru != nil || username == "" {
-		return errors.New("Username is required.")
+		return errors.New("Username is required")
 	}
 
 	public, _ := command.Flags().GetBool("public")
@@ -551,7 +551,7 @@ func modifyChannelCmdF(command *cobra.Command, args []string) error {
 	}
 
 	if !(channel.Type == model.CHANNEL_OPEN || channel.Type == model.CHANNEL_PRIVATE) {
-		return errors.New("You can only change the type of public/private channels.")
+		return errors.New("You can only change the type of public/private channels")
 	}
 
 	channel.Type = model.CHANNEL_OPEN

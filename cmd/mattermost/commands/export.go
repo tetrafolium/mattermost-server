@@ -198,7 +198,7 @@ func bulkExportCmdF(command *cobra.Command, args []string) error {
 		return errors.Wrap(err, "all-teams flag error")
 	}
 	if !allTeams {
-		return errors.New("Nothing to export. Please specify the --all-teams flag to export all teams.")
+		return errors.New("Nothing to export. Please specify the --all-teams flag to export all teams")
 	}
 
 	fileWriter, err := os.Create(args[0])

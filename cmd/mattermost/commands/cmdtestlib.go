@@ -23,7 +23,7 @@ import (
 	"github.com/tetrafolium/mattermost-server/v5/testlib"
 )
 
-var coverprofileCounters map[string]int = make(map[string]int)
+var coverprofileCounters = make(map[string]int)
 
 var mainHelper *testlib.MainHelper
 

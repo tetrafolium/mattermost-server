@@ -5,9 +5,10 @@ package app
 
 import (
 	"fmt"
+	"testing"
+
 	"github.com/tetrafolium/mattermost-server/v5/plugin/plugintest/mock"
 	"github.com/tetrafolium/mattermost-server/v5/store/storetest/mocks"
-	"testing"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

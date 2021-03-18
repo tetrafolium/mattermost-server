@@ -149,3 +149,4 @@ inspecode:
       machine: {cpu: 1.5}   # avoid Timed-Out
       options: [--single-occurrence, --all-likelihoods]
       thresholds: {num-issues: 112}
+

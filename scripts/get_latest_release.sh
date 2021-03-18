@@ -49,7 +49,7 @@ fi
 
 if [[ -z "$REL_TO_USE" ]]
 then
-  echo "An error has occured trying to get the latest mmctl release. Aborting. Perhaps api.github.com is down, or you are being rate-limited.";
+  echo "An error has occurred trying to get the latest mmctl release. Aborting. Perhaps api.github.com is down, or you are being rate-limited.";
   echo "Set the GITHUB_USERNAME and GITHUB_TOKEN environment variables to the appropriate values to work around Github rate-limiting.";
   exit 1;
 else

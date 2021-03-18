@@ -10,12 +10,12 @@ import (
 	"github.com/tetrafolium/mattermost-server/v5/mlog"
 	"github.com/tetrafolium/mattermost-server/v5/services/cache"
 
+	"github.com/stretchr/testify/mock"
 	"github.com/tetrafolium/mattermost-server/v5/model"
 	cachemocks "github.com/tetrafolium/mattermost-server/v5/services/cache/mocks"
 	"github.com/tetrafolium/mattermost-server/v5/store"
 	"github.com/tetrafolium/mattermost-server/v5/store/storetest/mocks"
 	"github.com/tetrafolium/mattermost-server/v5/testlib"
-	"github.com/stretchr/testify/mock"
 )
 
 var mainHelper *testlib.MainHelper

@@ -7,8 +7,8 @@ import (
 	"errors"
 	"io/ioutil"
 
-	"github.com/tetrafolium/mattermost-server/v5/audit"
 	"github.com/spf13/cobra"
+	"github.com/tetrafolium/mattermost-server/v5/audit"
 )
 
 var LicenseCmd = &cobra.Command{

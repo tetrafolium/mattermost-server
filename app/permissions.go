@@ -10,8 +10,8 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/tetrafolium/mattermost-server/v5/model"
 	"github.com/pkg/errors"
+	"github.com/tetrafolium/mattermost-server/v5/model"
 )
 
 const permissionsExportBatchSize = 100

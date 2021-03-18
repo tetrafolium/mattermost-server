@@ -4,11 +4,11 @@
 package commands
 
 import (
+	"github.com/spf13/cobra"
 	"github.com/tetrafolium/mattermost-server/v5/app"
 	"github.com/tetrafolium/mattermost-server/v5/config"
 	"github.com/tetrafolium/mattermost-server/v5/model"
 	"github.com/tetrafolium/mattermost-server/v5/utils"
-	"github.com/spf13/cobra"
 )
 
 func InitDBCommandContextCobra(command *cobra.Command) (*app.App, error) {

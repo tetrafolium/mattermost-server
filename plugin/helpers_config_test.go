@@ -6,10 +6,10 @@ package plugin_test
 import (
 	"testing"
 
+	"github.com/stretchr/testify/assert"
 	"github.com/tetrafolium/mattermost-server/v5/model"
 	"github.com/tetrafolium/mattermost-server/v5/plugin"
 	"github.com/tetrafolium/mattermost-server/v5/plugin/plugintest"
-	"github.com/stretchr/testify/assert"
 )
 
 func TestCheckRequiredServerConfiguration(t *testing.T) {

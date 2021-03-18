@@ -23,11 +23,11 @@ import (
 	"github.com/getsentry/sentry-go"
 	"github.com/tetrafolium/mattermost-server/v5/mlog"
 
+	"github.com/stretchr/testify/require"
 	"github.com/tetrafolium/mattermost-server/v5/config"
 	"github.com/tetrafolium/mattermost-server/v5/model"
 	"github.com/tetrafolium/mattermost-server/v5/store/storetest"
 	"github.com/tetrafolium/mattermost-server/v5/utils/fileutils"
-	"github.com/stretchr/testify/require"
 )
 
 func TestStartServerSuccess(t *testing.T) {

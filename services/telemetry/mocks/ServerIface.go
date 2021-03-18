@@ -5,8 +5,8 @@
 package mocks
 
 import (
-	httpservice "github.com/tetrafolium/mattermost-server/v5/services/httpservice"
 	mock "github.com/stretchr/testify/mock"
+	httpservice "github.com/tetrafolium/mattermost-server/v5/services/httpservice"
 
 	model "github.com/tetrafolium/mattermost-server/v5/model"
 

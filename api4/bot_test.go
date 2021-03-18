@@ -12,10 +12,10 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/stretchr/testify/require"
 	"github.com/tetrafolium/mattermost-server/v5/model"
 	"github.com/tetrafolium/mattermost-server/v5/utils/fileutils"
 	"github.com/tetrafolium/mattermost-server/v5/utils/testutils"
-	"github.com/stretchr/testify/require"
 )
 
 func TestCreateBot(t *testing.T) {

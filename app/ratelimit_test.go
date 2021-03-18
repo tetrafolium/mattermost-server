@@ -9,8 +9,8 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/tetrafolium/mattermost-server/v5/model"
 	"github.com/stretchr/testify/require"
+	"github.com/tetrafolium/mattermost-server/v5/model"
 )
 
 func genRateLimitSettings(useAuth, useIP bool, header string) *model.RateLimitSettings {

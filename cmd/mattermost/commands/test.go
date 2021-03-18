@@ -12,11 +12,11 @@ import (
 	"os/signal"
 	"syscall"
 
+	"github.com/spf13/cobra"
 	"github.com/tetrafolium/mattermost-server/v5/api4"
 	"github.com/tetrafolium/mattermost-server/v5/model"
 	"github.com/tetrafolium/mattermost-server/v5/utils"
 	"github.com/tetrafolium/mattermost-server/v5/wsapi"
-	"github.com/spf13/cobra"
 )
 
 var TestCmd = &cobra.Command{

@@ -12,9 +12,9 @@ import (
 	"sort"
 	"strings"
 
+	"github.com/spf13/cobra"
 	"github.com/tetrafolium/mattermost-server/v5/mlog"
 	"github.com/tetrafolium/mattermost-server/v5/model"
-	"github.com/spf13/cobra"
 )
 
 const CUSTOM_DEFAULTS_ENV_VAR = "MM_CUSTOM_DEFAULTS_PATH"

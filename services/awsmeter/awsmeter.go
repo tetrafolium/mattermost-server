@@ -8,10 +8,10 @@ import (
 	"os"
 	"time"
 
+	"github.com/pkg/errors"
 	"github.com/tetrafolium/mattermost-server/v5/mlog"
 	"github.com/tetrafolium/mattermost-server/v5/model"
 	"github.com/tetrafolium/mattermost-server/v5/store"
-	"github.com/pkg/errors"
 
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/credentials"

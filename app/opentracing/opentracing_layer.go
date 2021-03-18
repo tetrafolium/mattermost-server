@@ -20,6 +20,8 @@ import (
 	"github.com/gorilla/websocket"
 	"github.com/mattermost/go-i18n/i18n"
 	goi18n "github.com/mattermost/go-i18n/i18n"
+	"github.com/opentracing/opentracing-go/ext"
+	spanlog "github.com/opentracing/opentracing-go/log"
 	"github.com/tetrafolium/mattermost-server/v5/app"
 	"github.com/tetrafolium/mattermost-server/v5/audit"
 	"github.com/tetrafolium/mattermost-server/v5/einterfaces"
@@ -33,8 +35,6 @@ import (
 	"github.com/tetrafolium/mattermost-server/v5/services/timezones"
 	"github.com/tetrafolium/mattermost-server/v5/services/tracing"
 	"github.com/tetrafolium/mattermost-server/v5/store"
-	"github.com/opentracing/opentracing-go/ext"
-	spanlog "github.com/opentracing/opentracing-go/log"
 )
 
 type OpenTracingAppLayer struct {

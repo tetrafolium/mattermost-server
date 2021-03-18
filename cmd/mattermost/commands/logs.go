@@ -7,8 +7,8 @@ import (
 	"io"
 	"os"
 
-	"github.com/tetrafolium/mattermost-server/v5/mlog/human"
 	"github.com/spf13/cobra"
+	"github.com/tetrafolium/mattermost-server/v5/mlog/human"
 )
 
 var LogsCmd = &cobra.Command{

@@ -14,10 +14,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/tetrafolium/mattermost-server/v5/mlog"
-	"github.com/tetrafolium/mattermost-server/v5/model"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
+	"github.com/tetrafolium/mattermost-server/v5/mlog"
+	"github.com/tetrafolium/mattermost-server/v5/model"
 )
 
 func TestGetPing(t *testing.T) {

@@ -11,9 +11,9 @@ import (
 
 	"github.com/stretchr/testify/require"
 
+	"github.com/stretchr/testify/assert"
 	"github.com/tetrafolium/mattermost-server/v5/model"
 	"github.com/tetrafolium/mattermost-server/v5/utils/fileutils"
-	"github.com/stretchr/testify/assert"
 )
 
 func TestImportValidateSchemeImportData(t *testing.T) {

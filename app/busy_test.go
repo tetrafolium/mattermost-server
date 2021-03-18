@@ -8,9 +8,9 @@ import (
 	"testing"
 	"time"
 
+	"github.com/stretchr/testify/require"
 	"github.com/tetrafolium/mattermost-server/v5/einterfaces"
 	"github.com/tetrafolium/mattermost-server/v5/model"
-	"github.com/stretchr/testify/require"
 )
 
 func TestBusySet(t *testing.T) {

@@ -10,10 +10,10 @@ import (
 	"net/http"
 	"path/filepath"
 
+	"github.com/pkg/errors"
 	"github.com/tetrafolium/mattermost-server/v5/mlog"
 	"github.com/tetrafolium/mattermost-server/v5/model"
 	"github.com/tetrafolium/mattermost-server/v5/utils"
-	"github.com/pkg/errors"
 	"golang.org/x/crypto/openpgp"
 	"golang.org/x/crypto/openpgp/armor"
 )

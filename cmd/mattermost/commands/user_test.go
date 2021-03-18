@@ -6,8 +6,8 @@ package commands
 import (
 	"testing"
 
-	"github.com/tetrafolium/mattermost-server/v5/model"
 	"github.com/stretchr/testify/require"
+	"github.com/tetrafolium/mattermost-server/v5/model"
 )
 
 func TestCreateUserWithTeam(t *testing.T) {

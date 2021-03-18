@@ -8,8 +8,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/tetrafolium/mattermost-server/v5/model"
 	"github.com/spf13/cobra"
+	"github.com/tetrafolium/mattermost-server/v5/model"
 )
 
 var IntegrityCmd = &cobra.Command{

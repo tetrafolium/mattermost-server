@@ -11,8 +11,8 @@ import (
 
 	"github.com/tetrafolium/mattermost-server/v5/model"
 
-	"github.com/tetrafolium/mattermost-server/v5/config/config_generator/generator"
 	"github.com/stretchr/testify/require"
+	"github.com/tetrafolium/mattermost-server/v5/config/config_generator/generator"
 )
 
 func TestDefaultsGenerator(t *testing.T) {

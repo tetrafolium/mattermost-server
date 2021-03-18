@@ -4,11 +4,11 @@
 package searchlayer
 
 import (
+	"github.com/pkg/errors"
 	"github.com/tetrafolium/mattermost-server/v5/mlog"
 	"github.com/tetrafolium/mattermost-server/v5/model"
 	"github.com/tetrafolium/mattermost-server/v5/services/searchengine"
 	"github.com/tetrafolium/mattermost-server/v5/store"
-	"github.com/pkg/errors"
 )
 
 type SearchChannelStore struct {

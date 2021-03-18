@@ -15,6 +15,9 @@ import (
 	"time"
 
 	"github.com/NYTimes/gziphandler"
+	"github.com/opentracing/opentracing-go"
+	"github.com/opentracing/opentracing-go/ext"
+	spanlog "github.com/opentracing/opentracing-go/log"
 	"github.com/tetrafolium/mattermost-server/v5/app"
 	app_opentracing "github.com/tetrafolium/mattermost-server/v5/app/opentracing"
 	"github.com/tetrafolium/mattermost-server/v5/mlog"
@@ -22,9 +25,6 @@ import (
 	"github.com/tetrafolium/mattermost-server/v5/services/tracing"
 	"github.com/tetrafolium/mattermost-server/v5/store/opentracinglayer"
 	"github.com/tetrafolium/mattermost-server/v5/utils"
-	"github.com/opentracing/opentracing-go"
-	"github.com/opentracing/opentracing-go/ext"
-	spanlog "github.com/opentracing/opentracing-go/log"
 )
 
 func GetHandlerName(h func(*Context, http.ResponseWriter, *http.Request)) string {

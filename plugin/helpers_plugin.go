@@ -10,8 +10,8 @@ import (
 	"time"
 
 	"github.com/blang/semver"
-	"github.com/tetrafolium/mattermost-server/v5/model"
 	"github.com/pkg/errors"
+	"github.com/tetrafolium/mattermost-server/v5/model"
 )
 
 // InstallPluginFromURL implements Helpers.InstallPluginFromURL.

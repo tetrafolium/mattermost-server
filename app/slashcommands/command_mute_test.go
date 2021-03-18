@@ -8,8 +8,8 @@ import (
 	"time"
 
 	"github.com/mattermost/go-i18n/i18n"
-	"github.com/tetrafolium/mattermost-server/v5/model"
 	"github.com/stretchr/testify/assert"
+	"github.com/tetrafolium/mattermost-server/v5/model"
 )
 
 func TestMuteCommandNoChannel(t *testing.T) {

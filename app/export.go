@@ -13,9 +13,9 @@ import (
 
 	"github.com/tetrafolium/mattermost-server/v5/store"
 
+	"github.com/pkg/errors"
 	"github.com/tetrafolium/mattermost-server/v5/mlog"
 	"github.com/tetrafolium/mattermost-server/v5/model"
-	"github.com/pkg/errors"
 )
 
 // We use this map to identify the exportable preferences.
